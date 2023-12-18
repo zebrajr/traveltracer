@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Eiffel Tower",
+        "lat": 48.8584,
+        "lng": 2.2945
+    },
+    {
+        "id": 2,
+        "name": "Statue of Liberty",
+        "lat": 40.6892,
+        "lng": -74.0445
+    },
+    {
+        "id": 3,
+        "name": "Great Wall of China",
+        "lat": 40.4319,
+        "lng": 116.5704
+    }
+]
