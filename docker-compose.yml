@@ -23,6 +23,9 @@ services:
       - "80:80"
     environment:
       - NODE_ENV=production
+    volumes:
+      - ./frontend/public/lists:/usr/share/nginx/html/lists
+      - ./frontend/public/maps:/usr/share/nginx/html/maps
     # Used in Reverse Proxy Setup
     #expose:
     #   - 80

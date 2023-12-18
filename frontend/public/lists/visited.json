@@ -180,7 +180,7 @@
         "lng": -7.62
     },
     {
-        "name": "Athens, Portugal",
+        "name": "Athens, Greece",
         "description": "",
         "images" : [
             ["url_to_budapest_thumbnail.jpg", "url_to_budapest_image.jpg"]
@@ -189,7 +189,7 @@
         "lng": 23.7348324
     },
     {
-        "name": "Thessaloniki, Portugal",
+        "name": "Thessaloniki, Greece",
         "description": "",
         "images" : [
             ["url_to_budapest_thumbnail.jpg", "url_to_budapest_image.jpg"]
