@@ -10,7 +10,7 @@ const MapComponent = () => {
 
   useEffect(() => {
     // Fetch GeoJSON data
-    fetch('world.json')
+    fetch('maps/world.json')
       .then(res => res.json())
       .then(data => setGeoJson(data));
 
@@ -47,35 +47,42 @@ const MapComponent = () => {
         attribution='Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       />
       {geoJson && <GeoJSON data={geoJson} />}
+
       {visitedPois.map(poi => (
-        <Marker key={poi.id} position={[poi.lat, poi.lng]} icon={visitedIcon}>
+        <Marker position={[poi.lat, poi.lng]} icon={visitedIcon}>
           <Popup>
             <div>
               <h2>{poi.name}</h2>
               <p>{poi.description}</p>
-              <img
-                src={poi.thumbnailUrl}
-                alt={`Thumbnail of ${poi.name}`}
-                style={{ cursor: 'pointer' }}
-                onClick={() => openInNewTab(poi.imageUrl)}
-              />
+              {poi.images.map(([thumbnailUrl, imageUrl]) => (
+                <img
+                  key={thumbnailUrl} // Unique key for React's rendering
+                  src={thumbnailUrl}
+                  alt={`Thumbnail of ${poi.name}`}
+                  style={{ cursor: 'pointer', margin: '5px' }}
+                  onClick={() => openInNewTab(imageUrl)}
+                />
+              ))}
             </div>
           </Popup>
         </Marker>
       ))}
 
       {wishlistPois.map(poi => (
-        <Marker key={poi.id} position={[poi.lat, poi.lng]} icon={wishlistIcon}>
+        <Marker position={[poi.lat, poi.lng]} icon={wishlistIcon}>
           <Popup>
             <div>
               <h2>{poi.name}</h2>
               <p>{poi.description}</p>
-              <img
-                src={poi.thumbnailUrl}
-                alt={`Thumbnail of ${poi.name}`}
-                style={{ cursor: 'pointer' }}
-                onClick={() => openInNewTab(poi.imageUrl)}
-              />
+              {poi.images.map(([thumbnailUrl, imageUrl]) => (
+                <img
+                  key={thumbnailUrl} // Unique key for React's rendering
+                  src={thumbnailUrl}
+                  alt={`Thumbnail of ${poi.name}`}
+                  style={{ cursor: 'pointer', margin: '5px' }}
+                  onClick={() => openInNewTab(imageUrl)}
+                />
+              ))}
             </div>
           </Popup>
         </Marker>

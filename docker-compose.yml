@@ -14,9 +14,9 @@ services:
     #stdin_open: true
     #tty: true
 
-  website:
+  traveltracer:
     build: .
-    container_name: website
+    container_name: traveltracer
     restart: unless-stopped
     # Use WITHOUT Reverse Proxy Setup
     ports:
