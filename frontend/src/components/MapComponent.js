@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, Marker, Popup, LayerGroup, LayersControl } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -48,46 +48,55 @@ const MapComponent = () => {
       />
       {geoJson && <GeoJSON data={geoJson} />}
 
-      {visitedPois.map(poi => (
-        <Marker position={[poi.lat, poi.lng]} icon={visitedIcon}>
-          <Popup>
-            <div>
-              <h2>{poi.name}</h2>
-              <p>{poi.description}</p>
-              {poi.images.map(([thumbnailUrl, imageUrl]) => (
-                <img
-                  key={thumbnailUrl} // Unique key for React's rendering
-                  src={thumbnailUrl}
-                  alt={`Thumbnail of ${poi.name}`}
-                  style={{ cursor: 'pointer', margin: '5px' }}
-                  onClick={() => openInNewTab(imageUrl)}
-                />
-              ))}
-            </div>
-          </Popup>
-        </Marker>
-      ))}
+      <LayersControl position="topright">
+        <LayersControl.Overlay name="Visited" checked>
+          <LayerGroup>
+            {visitedPois.map(poi => (
+              <Marker position={[poi.lat, poi.lng]} icon={visitedIcon}>
+                <Popup>
+                  <div>
+                    <h2>{poi.name}</h2>
+                    <p>{poi.description}</p>
+                    {poi.images.map(([thumbnailUrl, imageUrl]) => (
+                      <img
+                        key={thumbnailUrl} // Unique key for React's rendering
+                        src={thumbnailUrl}
+                        alt={`Thumbnail of ${poi.name}`}
+                        style={{ cursor: 'pointer', margin: '5px' }}
+                        onClick={() => openInNewTab(imageUrl)}
+                      />
+                    ))}
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+          </LayerGroup>
+        </LayersControl.Overlay>
 
-      {wishlistPois.map(poi => (
-        <Marker position={[poi.lat, poi.lng]} icon={wishlistIcon}>
-          <Popup>
-            <div>
-              <h2>{poi.name}</h2>
-              <p>{poi.description}</p>
-              {poi.images.map(([thumbnailUrl, imageUrl]) => (
-                <img
-                  key={thumbnailUrl} // Unique key for React's rendering
-                  src={thumbnailUrl}
-                  alt={`Thumbnail of ${poi.name}`}
-                  style={{ cursor: 'pointer', margin: '5px' }}
-                  onClick={() => openInNewTab(imageUrl)}
-                />
-              ))}
-            </div>
-          </Popup>
-        </Marker>
-      ))}
-
+        <LayersControl.Overlay name="Wishlist">
+          <LayerGroup>
+            {wishlistPois.map(poi => (
+              <Marker position={[poi.lat, poi.lng]} icon={wishlistIcon}>
+                <Popup>
+                  <div>
+                    <h2>{poi.name}</h2>
+                    <p>{poi.description}</p>
+                    {poi.images.map(([thumbnailUrl, imageUrl]) => (
+                      <img
+                        key={thumbnailUrl} // Unique key for React's rendering
+                        src={thumbnailUrl}
+                        alt={`Thumbnail of ${poi.name}`}
+                        style={{ cursor: 'pointer', margin: '5px' }}
+                        onClick={() => openInNewTab(imageUrl)}
+                      />
+                    ))}
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+          </LayerGroup>
+        </LayersControl.Overlay>
+      </LayersControl>
     </MapContainer>
   );
 };
