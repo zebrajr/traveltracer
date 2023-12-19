@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  dev:
+    image: node:21
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    command: npm start
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3000:3000"
+    #stdin_open: true
+    #tty: true
+
+  traveltracer:
+    build: .
+    container_name: traveltracer
+    restart: unless-stopped
+    # Use WITHOUT Reverse Proxy Setup
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./frontend/public/lists:/usr/share/nginx/html/lists
+      - ./frontend/public/maps:/usr/share/nginx/html/maps
+    # Used in Reverse Proxy Setup
+    #expose:
+    #   - 80
+    # Networks
+    #networks:
+    #  - reverse_proxy_network
+
+
+# Used in a reverse proxy setup
+# networks:
+#   reverse_proxy_network:
+#     name: reverse_proxy_network
+#     external: true
