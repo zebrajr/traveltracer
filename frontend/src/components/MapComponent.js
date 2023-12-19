@@ -53,7 +53,7 @@ const MapComponent = () => {
           <LayerGroup>
             {visitedPois.map(poi => (
               <Marker position={[poi.lat, poi.lng]} icon={visitedIcon}>
-                <Popup>
+                <Popup style={{ maxWidth: 'none', width: 'auto' }}>
                   <div>
                     <h2>{poi.name}</h2>
                     <p>{poi.description}</p>
@@ -62,7 +62,7 @@ const MapComponent = () => {
                         key={thumbnailUrl} // Unique key for React's rendering
                         src={thumbnailUrl}
                         alt={`Thumbnail of ${poi.name}`}
-                        style={{ cursor: 'pointer', margin: '5px' }}
+                        style={{ cursor: 'pointer', width: '100%', display: 'block', marginBottom: '5px' }}
                         onClick={() => openInNewTab(imageUrl)}
                       />
                     ))}
@@ -77,7 +77,7 @@ const MapComponent = () => {
           <LayerGroup>
             {wishlistPois.map(poi => (
               <Marker position={[poi.lat, poi.lng]} icon={wishlistIcon}>
-                <Popup>
+                <Popup style={{ maxWidth: 'none', width: 'auto' }}>
                   <div>
                     <h2>{poi.name}</h2>
                     <p>{poi.description}</p>
@@ -86,7 +86,7 @@ const MapComponent = () => {
                         key={thumbnailUrl} // Unique key for React's rendering
                         src={thumbnailUrl}
                         alt={`Thumbnail of ${poi.name}`}
-                        style={{ cursor: 'pointer', margin: '5px' }}
+                        style={{ cursor: 'pointer', width: '100%', display: 'block', marginBottom: '5px' }}
                         onClick={() => openInNewTab(imageUrl)}
                       />
                     ))}
