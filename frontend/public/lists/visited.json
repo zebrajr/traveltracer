@@ -54,6 +54,16 @@
         "lng": 8.4034195
     },
     {
+        "name": "Heidelberg, Germany",
+        "description": "A beautiful German city that is perfect for a quick Weekend escape.",
+        "images" : [
+            ["https://cdn.carlossousa.tech/images/Heidelberg/Heidelberg_01_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Heidelberg/Heidelberg_01.jpg"],
+            ["https://cdn.carlossousa.tech/images/Heidelberg/Heidelberg_02_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Heidelberg/Heidelberg_02.jpg"]
+        ],
+        "lat": 49.4093582,
+        "lng": 8.694724
+    },
+    {
         "name": "Ludwigsburg, Germany",
         "description": "",
         "images" : [
@@ -181,9 +191,12 @@
     },
     {
         "name": "Athens, Greece",
-        "description": "",
+        "description": "What can be said? A *must* visit if you enjoy culture and history. You can walk the city for days and still feel like like you barely scratched the surface of what there is to see. Advice: Don't visit in High Summer!",
         "images" : [
-            ["url_to_budapest_thumbnail.jpg", "url_to_budapest_image.jpg"]
+            ["https://cdn.carlossousa.tech/images/Athens/Athens_01_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Athens/Athens_01.jpg"],
+            ["https://cdn.carlossousa.tech/images/Athens/Athens_02_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Athens/Athens_02.jpg"],
+            ["https://cdn.carlossousa.tech/images/Athens/Athens_03_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Athens/Athens_03.jpg"],
+            ["https://cdn.carlossousa.tech/images/Athens/Athens_04_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Athens/Athens_04.jpg"]
         ],
         "lat": 37.9755648,
         "lng": 23.7348324
@@ -192,7 +205,9 @@
         "name": "Thessaloniki, Greece",
         "description": "",
         "images" : [
-            ["url_to_budapest_thumbnail.jpg", "url_to_budapest_image.jpg"]
+            ["https://cdn.carlossousa.tech/images/Thessaloniki/Thessaloniki_01_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Thessaloniki/Thessaloniki_01.jpg"],
+            ["https://cdn.carlossousa.tech/images/Thessaloniki/Thessaloniki_02_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Thessaloniki/Thessaloniki_02.jpg"],
+            ["https://cdn.carlossousa.tech/images/Thessaloniki/Thessaloniki_03_thumbnail.jpg", "https://cdn.carlossousa.tech/images/Thessaloniki/Thessaloniki_03.jpg"]
         ],
         "lat": 40.6403167,
         "lng": 22.9352716

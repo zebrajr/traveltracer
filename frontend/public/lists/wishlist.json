@@ -27,6 +27,15 @@
         "lng": 19.4569911
     },
     {
+        "name": "Warsaw, Poland",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 52.2319581,
+        "lng": 21.0067249
+    },
+    {
         "name": "Vientiane, Laos",
         "description": "",
         "images" : [
@@ -189,6 +198,15 @@
         "lng": 11.6789076
     },
     {
+        "name": "Sicily, Italy",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 37.587794,
+        "lng": 14.155048
+    },
+    {
         "name": "London, England",
         "description": "",
         "images" : [
@@ -196,6 +214,15 @@
         ],
         "lat": 51.5074456,
         "lng": -0.1277653
+    },
+    {
+        "name": "Edinburgh, Scotland",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 55.9533456,
+        "lng": -3.1883749
     },
     {
         "name": "Dublin, Ireland",
@@ -243,6 +270,15 @@
         "lng": 2.1266886
     },
     {
+        "name": "Annecy, France",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 45.8992348,
+        "lng": 6.1288847
+    },
+    {
         "name": "Madrid, Spain",
         "description": "",
         "images" : [
@@ -270,6 +306,15 @@
         "lng": -3.5995337
     },
     {
+        "name": "Seville, Spain",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 37.3886303,
+        "lng": -5.9953403
+    },
+    {
         "name": "Cairo, Egypt",
         "description": "",
         "images" : [
@@ -293,8 +338,8 @@
         "images" : [
             []
         ],
-        "lat": -28.1677446,
-        "lng": 153.5352458
+        "lat": 28.2571175,
+        "lng": -80.7395873
     },
     {
         "name": "Longmen Grottoes, China",
@@ -349,5 +394,59 @@
         ],
         "lat": 55.6867243,
         "lng": 12.5700724
+    },
+    {
+        "name": "Reykjavík, Iceland",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 64.145981,
+        "lng": -21.9422367
+    },
+    {
+        "name": "Stockholm, Sweden",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 59.3251172,
+        "lng": 18.0710935
+    },
+    {
+        "name": "Helsinki, Finland",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 60.1674881,
+        "lng": 24.9427473
+    },
+    {
+        "name": "Saint Petersburg, Russia",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 59.938732,
+        "lng": 30.316229
+    },
+    {
+        "name": "Moskow, Russia",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 55.7505412,
+        "lng": 37.6174782
+    },
+    {
+        "name": "Berlin, Germany",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 52.5170365,
+        "lng": 13.3888599
     }
 ]
