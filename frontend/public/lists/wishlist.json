@@ -1,1 +1,353 @@
-[]
+[
+    {
+        "name": "Madeira, Portugal",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 32.7517501,
+        "lng": -16.9817487
+    },
+    {
+        "name": "Azores, Portugal",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 37.8085564,
+        "lng": -25.4731374
+    },
+    {
+        "name": "Łódź, Poland",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 51.7687323,
+        "lng": 19.4569911
+    },
+    {
+        "name": "Vientiane, Laos",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 17.9640988,
+        "lng": 102.6133707
+    },
+    {
+        "name": "Luang Prabang, Laos",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 19.8887438,
+        "lng": 102.135898
+    },
+    {
+        "name": "Crete, Greece",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 35.3084952,
+        "lng": 24.4633423
+    },
+    {
+        "name": "Rohdes, Greece",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 36.1725297,
+        "lng": 27.9194016
+    },
+    {
+        "name": "Mykonos, Greece",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 37.4513936,
+        "lng": 25.3923149
+    },
+    {
+        "name": "Santorini, Greece",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 36.4071112,
+        "lng": 25.4566637
+    },
+    {
+        "name": "Accra, Ghana",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 5.5571096,
+        "lng": 5.5571096
+    },
+    {
+        "name": "Calgary, Canada",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 51.0456064,
+        "lng": -114.057541
+    },
+    {
+        "name": "Edmonton, Canada",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 53.5462055,
+        "lng": -113.491241
+    },
+    {
+        "name": "Sundre, Canada",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 51.7971316,
+        "lng": -114.6394148
+    },
+    {
+        "name": "Banff National Park, Alberta, Canada",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 52.28333,
+        "lng": -117.469
+    },
+    {
+        "name": "Ljubljana, Slovenia",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 46.0500268,
+        "lng": 14.5069289
+    },
+    {
+        "name": "Maribor, Slovenia",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 46.5576439,
+        "lng": 15.6455854
+    },
+    {
+        "name": "Rome, Italy",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 41.8933203,
+        "lng": 12.4829321
+    },
+    {
+        "name": "Venice, Italy",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 45.4371908,
+        "lng": 12.3345898
+    },
+    {
+        "name": "Milan, Italy",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 45.4641943,
+        "lng": 9.1896346
+    },
+    {
+        "name": "Puglia, Italy",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 40.9842539,
+        "lng": 16.6210027
+    },
+    {
+        "name": "Pienza, Italy",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 43.0765485,
+        "lng": 11.6789076
+    },
+    {
+        "name": "London, England",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 51.5074456,
+        "lng": -0.1277653
+    },
+    {
+        "name": "Dublin, Ireland",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 53.3493795,
+        "lng": -6.2605593
+    },
+    {
+        "name": "Paris, France",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 48.8588897,
+        "lng": 2.320041
+    },
+    {
+        "name": "Giverny, France",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 49.0766185,
+        "lng": 1.5290285
+    },
+    {
+        "name": "Mont Saint-Michel, France",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 48.6359541,
+        "lng": -1.51146
+    },
+    {
+        "name": "Versailles, France",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 48.8035403,
+        "lng": 2.1266886
+    },
+    {
+        "name": "Madrid, Spain",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 40.4167047,
+        "lng": -3.7035825
+    },
+    {
+        "name": "Barcelona, Spain",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 41.3828939,
+        "lng": 2.1774322
+    },
+    {
+        "name": "Granada, Spain",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 37.1734995,
+        "lng": -3.5995337
+    },
+    {
+        "name": "Cairo, Egypt",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 30.0443879,
+        "lng": 31.2357257
+    },
+    {
+        "name": "Charleston, South Carolina, U.S.A.",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 32.7884363,
+        "lng": -79.9399309
+    },
+    {
+        "name": "Space Coast, Florida, U.S.A.",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": -28.1677446,
+        "lng": 153.5352458
+    },
+    {
+        "name": "Longmen Grottoes, China",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 34.5571154,
+        "lng": 112.4707112
+    },
+    {
+        "name": "Machu Picchu, Peru",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": -13.164422,
+        "lng": -72.5450851
+    },
+    {
+        "name": "Gyeongju, South Korea",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 35.8556705,
+        "lng": 129.2248811
+    },
+    {
+        "name": "Bucharest, Romania",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 44.4361414,
+        "lng": 26.1027202
+    },
+    {
+        "name": "Brașov, Romania",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 45.6525105,
+        "lng": 25.6105654
+    },
+    {
+        "name": "Copenhagen, Denmark",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 55.6867243,
+        "lng": 12.5700724
+    }
+]
