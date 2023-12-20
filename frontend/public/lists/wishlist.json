@@ -126,7 +126,7 @@
         "lng": -114.6394148
     },
     {
-        "name": "Banff National Park, Alberta, Canada",
+        "name": "Banff, Alberta, Canada",
         "description": "",
         "images" : [
             []
@@ -205,6 +205,15 @@
         ],
         "lat": 37.587794,
         "lng": 14.155048
+    },
+    {
+        "name": "Genoa, Italy",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 44.40726,
+        "lng": 8.9338624
     },
     {
         "name": "London, England",
@@ -342,6 +351,15 @@
         "lng": -80.7395873
     },
     {
+        "name": "New York, U.S.A.",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 40.7127281,
+        "lng": -74.0060152
+    },
+    {
         "name": "Longmen Grottoes, China",
         "description": "",
         "images" : [
@@ -349,6 +367,24 @@
         ],
         "lat": 34.5571154,
         "lng": 112.4707112
+    },
+    {
+        "name": "Hong Kong, China",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 22.2793278,
+        "lng": 114.1628131
+    },
+    {
+        "name": "Shanghai, China",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 31.2323437,
+        "lng": 121.4691024
     },
     {
         "name": "Machu Picchu, Peru",
@@ -448,5 +484,203 @@
         ],
         "lat": 52.5170365,
         "lng": 13.3888599
+    },
+    {
+        "name": "Sofia, Bulgaria",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 42.6977028,
+        "lng": 23.3217359
+    },
+    {
+        "name": "Belgrade, Serbia",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 44.8178131,
+        "lng": 20.4568974
+    },
+    {
+        "name": "Istanbul, Turkey",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 41.006381,
+        "lng": 28.9758715
+    },
+    {
+        "name": "Geneva, Switzerland",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 46.2017559,
+        "lng": 6.1466014
+    },
+    {
+        "name": "Amsterdam, Netherlands",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 52.3730796,
+        "lng": 4.8924534
+    },
+    {
+        "name": "Tokyo, Japan",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 35.6821936,
+        "lng": 139.762221
+    },
+    {
+        "name": "Osaka, Japan",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 34.661629,
+        "lng": 135.4999268
+    },
+    {
+        "name": "Kyoto, Japan",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 35.021041,
+        "lng": 135.7556075
+    },
+    {
+        "name": "Sydney, Australia",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": -33.8698439,
+        "lng": 151.2082848
+    },
+    {
+        "name": "Chiang Mai, Thailand",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 18.7882778,
+        "lng": 98.9858802
+    },
+    {
+        "name": "Bangkok, Thailand",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 13.7524938,
+        "lng": 100.4935089
+    },
+    {
+        "name": "Zanzibar, Tanzania",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": -6.0999443,
+        "lng": 39.3209443
+    },
+    {
+        "name": "Petra, Jordan",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 30.3258363,
+        "lng": 35.4745669
+    },
+    {
+        "name": "Paro, Bhutan",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 27.4646365,
+        "lng": 89.3183409
+    },
+    {
+        "name": "Singapore",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 1.357107,
+        "lng": 103.8194992
+    },
+    {
+        "name": "Hanoi, Vietnam",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 21.0283334,
+        "lng": 105.854041
+    },
+    {
+        "name": "Agra, India",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 27.1752554,
+        "lng": 78.0098161
+    },
+    {
+        "name": "Kuala Luimpur, Malaysia",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 3.1516964,
+        "lng": 101.6942371
+    },
+    {
+        "name": "Oslo, Norway",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 59.9133301,
+        "lng": 10.7389701
+    },
+    {
+        "name": "Bergen, Norway",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 60.3943055,
+        "lng": 5.3259192
+    },
+    {
+        "name": "Tromsø, Norway",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 69.6516345,
+        "lng": 18.9558585
+    },
+    {
+        "name": "Lofoten, Norway",
+        "description": "",
+        "images" : [
+            []
+        ],
+        "lat": 68.2023919,
+        "lng": 13.6809407
     }
 ]
