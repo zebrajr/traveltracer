@@ -1,47 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, memo } from 'react';
 import { MapContainer, TileLayer, GeoJSON, Marker, Popup, LayerGroup, LayersControl } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const MapComponent = () => {
-  const [geoJson, setGeoJson] = useState(null);
-  const [visitedPois, setVisitedPois] = useState([]);
-  const [wishlistPois, setWishlistPois] = useState([]);
+// Custom hook for fetching data
+const useFetchData = (url) => {
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Fetch GeoJSON data
-    fetch('maps/world.json')
+    fetch(url)
       .then(res => res.json())
-      .then(data => setGeoJson(data));
+      .then(setData);
+  }, [url]);
 
-    // Fetch Visited POIs
-    fetch('lists/visited.json')
-      .then(res => res.json())
-      .then(data => setVisitedPois(data));
+  return data;
+};
 
-    // Fetch Wishlist POIs
-    fetch('lists/wishlist.json')
-      .then(res => res.json())
-      .then(data => setWishlistPois(data));
-  }, []);
-
-  const visitedIcon = L.icon({
-    iconUrl: 'images/marker-visited.png', // URL to your visited icon
-    iconSize: [25, 25], // size of the icon
-  });
-
-  const wishlistIcon = L.icon({
-    iconUrl: 'images/marker-wishlist.png', // URL to your wishlist icon
-    iconSize: [25, 25], // size of the icon
-  });
-
-  const openInNewTab = (url) => {
+const IconMarker = memo(({ poi, icon }) => {
+  const openInNewTab = useCallback((url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
     if (newWindow) newWindow.opener = null;
-  };
+  }, []);
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={5} style={{ height: '100vh', width: '100wh' }}>
+    <Marker position={[poi.lat, poi.lng]} icon={icon}>
+      <Popup style={{ maxWidth: 'none', width: 'auto' }}>
+        <div>
+          <h2>{poi.name}</h2>
+          <p>{poi.description}</p>
+          {poi.images.map(([thumbnailUrl, imageUrl]) => (
+            <img
+              key={thumbnailUrl}
+              src={thumbnailUrl}
+              alt={`Thumbnail of ${poi.name}`}
+              style={{ cursor: 'pointer', width: '100%', display: 'block', marginBottom: '5px' }}
+              onClick={() => openInNewTab(imageUrl)}
+            />
+          ))}
+        </div>
+      </Popup>
+    </Marker>
+  );
+});
+
+const MapComponent = () => {
+  const geoJson = useFetchData('maps/world.json');
+  const visitedPois = useFetchData('lists/visited.json');
+  const wishlistPois = useFetchData('lists/wishlist.json');
+
+  const createIcon = (iconUrl) => L.icon({
+    iconUrl,
+    iconSize: [25, 25],
+  });
+
+  const visitedIcon = createIcon('images/marker-visited.png');
+  const wishlistIcon = createIcon('images/marker-wishlist.png');
+
+  return (
+    <MapContainer center={[48.778, 9.180]} zoom={5} style={{ height: '100vh', width: '100wh' }}>
       <TileLayer
         url="http://localhost:port/{z}/{x}/{y}.png"
         attribution='Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -51,48 +67,16 @@ const MapComponent = () => {
       <LayersControl position="topright">
         <LayersControl.Overlay name="Visited" checked>
           <LayerGroup>
-            {visitedPois.map(poi => (
-              <Marker position={[poi.lat, poi.lng]} icon={visitedIcon}>
-                <Popup style={{ maxWidth: 'none', width: 'auto' }}>
-                  <div>
-                    <h2>{poi.name}</h2>
-                    <p>{poi.description}</p>
-                    {poi.images.map(([thumbnailUrl, imageUrl]) => (
-                      <img
-                        key={thumbnailUrl} // Unique key for React's rendering
-                        src={thumbnailUrl}
-                        alt={`Thumbnail of ${poi.name}`}
-                        style={{ cursor: 'pointer', width: '100%', display: 'block', marginBottom: '5px' }}
-                        onClick={() => openInNewTab(imageUrl)}
-                      />
-                    ))}
-                  </div>
-                </Popup>
-              </Marker>
+            {visitedPois && visitedPois.map(poi => (
+              <IconMarker key={poi.id} poi={poi} icon={visitedIcon} />
             ))}
           </LayerGroup>
         </LayersControl.Overlay>
 
         <LayersControl.Overlay name="Wishlist">
           <LayerGroup>
-            {wishlistPois.map(poi => (
-              <Marker position={[poi.lat, poi.lng]} icon={wishlistIcon}>
-                <Popup style={{ maxWidth: 'none', width: 'auto' }}>
-                  <div>
-                    <h2>{poi.name}</h2>
-                    <p>{poi.description}</p>
-                    {poi.images.map(([thumbnailUrl, imageUrl]) => (
-                      <img
-                        key={thumbnailUrl} // Unique key for React's rendering
-                        src={thumbnailUrl}
-                        alt={`Thumbnail of ${poi.name}`}
-                        style={{ cursor: 'pointer', width: '100%', display: 'block', marginBottom: '5px' }}
-                        onClick={() => openInNewTab(imageUrl)}
-                      />
-                    ))}
-                  </div>
-                </Popup>
-              </Marker>
+            {wishlistPois && wishlistPois.map(poi => (
+              <IconMarker key={poi.id} poi={poi} icon={wishlistIcon} />
             ))}
           </LayerGroup>
         </LayersControl.Overlay>
@@ -100,6 +84,5 @@ const MapComponent = () => {
     </MapContainer>
   );
 };
-
 
 export default MapComponent;
