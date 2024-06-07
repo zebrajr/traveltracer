@@ -211,5 +211,41 @@
         ],
         "lat": 40.6403167,
         "lng": 22.9352716
+    },
+    {
+        "name": "Zadar, Croatia",
+        "description": "",
+        "images" : [
+            ["url_to_zadar_thumbnail.jpg", "url_to_zadar_image.jpg"]
+        ],
+        "lat": 44.119370,
+        "lng": 15.231365
+    },
+    {
+        "name": "Krka National Park, Croatia",
+        "description": "",
+        "images" : [
+            ["url_to_krka_national_park_thumbnail.jpg", "url_to_krka_national_park_image.jpg"]
+        ],
+        "lat": 43.870055,
+        "lng": 15.972346
+    },
+    {
+        "name": "Plitvice National Park, Croatia",
+        "description": "",
+        "images" : [
+            ["url_to_plitvice_national_park_thumbnail.jpg", "url_to_plitvice_national_park_image.jpg"]
+        ],
+        "lat": 44.869259,
+        "lng": 15.580604
+    },
+    {
+        "name": "Zagreb, Croatia",
+        "description": "",
+        "images" : [
+            ["url_to_zagreb_thumbnail.jpg", "url_to_zagreb_image.jpg"]
+        ],
+        "lat": 45.816430,
+        "lng": 15.970198
     }
 ]
