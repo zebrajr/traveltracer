@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, memo } from 'react';
+import React, { useEffect, useState, useCallback, memo, useMemo } from 'react';
 import { MapContainer, TileLayer, GeoJSON, Marker, Popup, LayerGroup, LayersControl } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -12,6 +12,24 @@ const useFetchData = (url) => {
       .then(res => res.json())
       .then(setData);
   }, [url]);
+
+  return data;
+};
+
+// Custom hook for fetching data from multiple URLs
+const useFetchMultipleData = (urls) => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    Promise.all(urls.map(url => fetch(url).then(res => res.json())))
+      .then(results => {
+        const combinedData = results.reduce((acc, current) => {
+          acc.features = [...acc.features, ...current.features];
+          return acc;
+        }, { type: "FeatureCollection", features: [] });
+        setData(combinedData);
+      });
+  }, [urls]);
 
   return data;
 };
@@ -44,7 +62,18 @@ const IconMarker = memo(({ poi, icon }) => {
 });
 
 const MapComponent = () => {
-  const geoJson = useFetchData('maps/world.json');
+  const geoJsonUrls = useMemo(() => [
+    'maps/world_part1.json',
+    'maps/world_part2.json',
+    'maps/world_part3.json',
+    'maps/world_part4.json',
+    'maps/world_part5.json',
+    'maps/world_part6.json',
+    'maps/world_part7.json',
+    'maps/world_part8.json'
+  ], []);
+
+  const geoJson = useFetchMultipleData(geoJsonUrls);
   const visitedPois = useFetchData('lists/visited.json');
   const wishlistPois = useFetchData('lists/wishlist.json');
 
