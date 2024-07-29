@@ -18,6 +18,24 @@
         "lng": 17.107748
     },
     {
+        "name": "Innsbruck, Austria",
+        "description": "",
+        "images" : [
+            ["url_to_innsbruck_thumbnail.jpg", "url_to_innsbruck_image.jpg"]
+        ],
+        "lat": 47.269211,
+        "lng": 11.404102
+    },
+    {
+        "name": "Salzburg, Austria",
+        "description": "",
+        "images" : [
+            ["url_to_salzburg_thumbnail.jpg", "url_to_salzburg_image.jpg"]
+        ],
+        "lat": 47.809490,
+        "lng": 13.055010
+    },
+    {
         "name": "Vienna, Austria",
         "description": "If you enjoy castles, palaces and visiting the home of one of the most long lasting and powerful families, dating centuries into the past where they dynasty effects can still be felt in almost the entire Central Europe, Vienna is your place.",
         "images" : [
@@ -62,6 +80,33 @@
         ],
         "lat": 49.4093582,
         "lng": 8.694724
+    },
+    {
+        "name": "Bastei Bridge, Germany",
+        "description": "",
+        "images" : [
+            ["url_to_bastei_thumbnail.jpg", "url_to_bastei_image.jpg"]
+        ],
+        "lat": 50.962411,
+        "lng": 14.074002
+    },
+    {
+        "name": "Lichtenstein Castle, Germany",
+        "description": "",
+        "images" : [
+            ["url_to_lichtenstein_thumbnail.jpg", "url_to_lichtenstein_image.jpg"]
+        ],
+        "lat": 48.406348,
+        "lng": 9.259083
+    },
+    {
+        "name": "Dresden, Germany",
+        "description": "",
+        "images" : [
+            ["url_to_dresden_thumbnail.jpg", "url_to_dresden_image.jpg"]
+        ],
+        "lat": 51.0493286,
+        "lng": 13.7381437
     },
     {
         "name": "Ludwigsburg, Germany",
@@ -161,6 +206,15 @@
         ],
         "lat": 41.1494512,
         "lng": -8.6107884
+    },
+    {
+        "name": "Évora, Portugal",
+        "description": "",
+        "images" : [
+            ["url_to_evora_thumbnail.jpg", "url_to_evora_image.jpg"]
+        ],
+        "lat": 38.5707742,
+        "lng": -7.9092808
     },
     {
         "name": "Lisbon, Portugal",
