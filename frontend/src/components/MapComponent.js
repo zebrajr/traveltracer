@@ -34,6 +34,7 @@ const useFetchMultipleData = (urls) => {
   return data;
 };
 
+
 const IconMarker = memo(({ poi, icon }) => {
   const openInNewTab = useCallback((url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
@@ -46,20 +47,35 @@ const IconMarker = memo(({ poi, icon }) => {
         <div>
           <h2>{poi.name}</h2>
           <p>{poi.description}</p>
-          {poi.images.map(([thumbnailUrl, imageUrl]) => (
-            <img
-              key={thumbnailUrl}
-              src={thumbnailUrl}
-              alt={`Thumbnail of ${poi.name}`}
-              style={{ cursor: 'pointer', width: '100%', display: 'block', marginBottom: '5px' }}
-              onClick={() => openInNewTab(imageUrl)}
-            />
-          ))}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
+            {poi.images.map(([thumbnailUrl, imageUrl], index) => (
+              <div 
+                key={thumbnailUrl} 
+                style={{ 
+                  width: 'calc(50% - 2.5px)', 
+                  boxSizing: 'border-box',
+                  marginBottom: index % 2 === 1 ? '5px' : '0'
+                }}
+              >
+                <img
+                  src={thumbnailUrl}
+                  alt={`Thumbnail of ${poi.name}`}
+                  style={{ 
+                    cursor: 'pointer', 
+                    width: '100%', 
+                    display: 'block' 
+                  }}
+                  onClick={() => openInNewTab(imageUrl)}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </Popup>
     </Marker>
   );
 });
+
 
 const MapComponent = () => {
   const geoJsonUrls = useMemo(() => [
